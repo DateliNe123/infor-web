@@ -1,0 +1,156 @@
+body {
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(
+      135deg,
+      #fce4ec,
+      #d1c4e9
+    ); /* Rosa claro e lilás */
+    color: #4a148c; /* Roxo escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Contêiner principal */
+  #story-container {
+    background-color: #ffffff; /* Branco */
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Texto */
+  p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #4a148c; /* Roxo escuro */
+  }
+  
+  /* Botões */
+  button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Botões personalizados */
+  .button1 {
+    background-color: #8e24aa; /* Roxo médio */
+  }
+  
+  .button1:hover {
+    background-color: #6a1b9a; /* Roxo escuro */
+    transform: scale(1.05);
+  }
+  
+  .button2 {
+    background-color: #ba68c8; /* Lilás */
+  }
+  
+  .button2:hover {
+    background-color: #ab47bc; /* Lilás mais escuro */
+    transform: scale(1.05);
+  }
+  
+  .button3 {
+    background-color: #f48fb1; /* Rosa */
+  }
+  
+  .button3:hover {
+    background-color: #f06292; /* Rosa escuro */
+    transform: scale(1.05);
+  }
+  
+  .button4 {
+    background-color: #ffeb3b; /* Amarelo */
+    color: #4a148c; /* Texto roxo */
+  }
+  
+  .button4:hover {
+    background-color: #fdd835; /* Amarelo escuro */
+    transform: scale(1.05);
+  }
+  
+  /* Caminho realizado */
+  #path {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #6a1b9a; /* Roxo escuro */
+    text-align: center;
+  }
+  
+  /* Lanternas animadas */
+  @keyframes float {
+    0% {script.js
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-20px) scale(1.1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-50px) scale(1);
+      opacity: 0.5;
+    }
+  }
+  
+  .lanterna {
+    position: absolute;
+    width: 50px;script.js
+    height: 70px;
+    background: radial-gradient(circle, #ffeb3b 20%, #f57f17 90%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(255, 235, 59, 0.8);
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .lanterna:nth-child(1) {
+    left: 20%;
+    animation-delay: 0s;
+  }
+  
+  .lanterna:nth-child(2) {
+    left: 40%;
+    animation-delay: 2s;
+  }
+  
+  .lanterna:nth-child(3) {
+    left: 60%;
+    animation-delay: 4s;
+  }
+  
+  .lanterna:nth-child(4) {
+    left: 80%;
+    animation-delay: 6s;
+  }
+  
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.2),
+      transparent 70%
+    );
+    z-index: 1;
+  }
+  
